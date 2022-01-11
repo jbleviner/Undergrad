@@ -1,2 +1,4 @@
 # Undergrad
-A collection of my undergraduate projects.
+A collection of undergraduate projects.
+
+- This repo will be continously updated as necessary.
