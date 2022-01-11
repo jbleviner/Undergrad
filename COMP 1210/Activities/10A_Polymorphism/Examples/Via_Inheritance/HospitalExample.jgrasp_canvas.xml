@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas xmlns="http://www.jgrasp.org">
+  <Language>Java</Language>
+  <ShowTypes>false</ShowTypes>
+  <Version>2</Version>
+  <Grid>
+    <Snap>true</Snap>
+    <Show>false</Show>
+  </Grid>
+  <Scope id="0">
+    <Name>main</Name>
+    <Signature>([Ljava/lang/String;)V</Signature>
+    <DeclaringType>HospitalExample</DeclaringType>
+    <Depth>0</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>240</X>
+      <Y>170</Y>
+      <W>308</W>
+      <H>162</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local Person` p</Expression>
+      <ViewerClass>_X_ElementView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>10</X>
+      <Y>170</Y>
+      <W>201</W>
+      <H>134</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local Person[]` personArray[0]</Expression>
+      <ViewerClass>_X_ElementView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>10</X>
+      <Y>340</Y>
+      <W>234</W>
+      <H>190</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local Person[]` personArray[1]</Expression>
+      <ViewerClass>_X_ElementView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>10</X>
+      <Y>560</Y>
+      <W>308</W>
+      <H>162</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local Person[]` personArray[2]</Expression>
+      <ViewerClass>_X_ElementView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>10</X>
+      <Y>40</Y>
+      <W>562</W>
+      <H>86</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local Person[]` personArray</Expression>
+      <Indices>i</Indices>
+      <ViewerClass>_X_A_ToStringView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Size>
+    <W>549</W>
+    <H>850</H>
+  </Size>
+  <ESize>
+    <W>549</W>
+    <H>850</H>
+  </ESize>
+</Canvas>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas xmlns="http://www.jgrasp.org">
+  <Language>Java</Language>
+  <ShowTypes>false</ShowTypes>
+  <Grid>
+    <Snap>true</Snap>
+    <Show>false</Show>
+  </Grid>
+  <Scope id="0">
+    <Name>main</Name>
+    <Signature>([Ljava/lang/String;)V</Signature>
+    <DeclaringType>AVLTreeExample</DeclaringType>
+    <Depth>0</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>false</AutoSize>
+      <X>100</X>
+      <Y>50</Y>
+      <W>608</W>
+      <H>588</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local jgraspvex.AVLTree` avlTree</Expression>
+      <ViewerClass>java__lang__Object_LinkedView</ViewerClass>
+      <ViewerData>
+        <ViewData>
+          <Scale>32</Scale>
+          <Width>55</Width>
+        </ViewData>
+      </ViewerData>
+    </Viewer>
+  </Frame>
+  <Size>
+    <W>778</W>
+    <H>800</H>
+  </Size>
+  <ESize>
+    <W>778</W>
+    <H>800</H>
+  </ESize>
+</Canvas>

@@ -1,0 +1,23 @@
+!798;s
+A
+SAU0PATH+=%<JGRASP_PATHS>%;
+SCU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+S+U0PATH+=%<JGRASP_PATHS>%;\012PATH+=%<V1>\\Bin;
+SJU0CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\012CLASSPATH+=.%;\012PATH+=%<JAVA_BIN_DIR>%;\012PATH+=%<JGRASP_PATHS>%;\012Debug +Debug_Applet\012CLASSPATH=+%;%<INJECTION_CLASSPATHS>\012Compile\012NOT_FOUND_MESSAGE==Make sure you have the full JDK, not just the JRE, installed.\\nThe JDK is available from http://www.oracle.com/technetwork/java/index.html.\012Run_Applet +Debug_Applet\012ADD_APPLETVIEWER_CLASSPATH==Y\012Document\012CLASSPATH=+%;%<TOOL_CLASSPATHS>\012CLASSPATH+=%<CLASSES_DIR>%;\012
+SOU0PATH+=%<JGRASP_PATHS>%;
+SyU0PATH+=%<PYTHON_PATH>%;\012PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SPU0
+s#i0
+s#k0
+s#j0
+s#l0
+!38;a
+a%\011TemperatureConverter_doc	b	c1	d0!31;g
+%\011TemperatureConverter.java
+!31;f
+%\011TemperatureConverter.java
+!35;l
+%\011TemperatureConverterTest.java
+!291;t
+jgrCheckstyle0xr	%\011TemperatureConverterTest.java	1351121911370:P	%\011TemperatureConverter.java	1351121904930:P	
+jgrJUnit0xr	%\011TemperatureConverterTest.java	1351121913995:P%\011TemperatureConverter.java	%\011TemperatureConverter.java	1351121913995:P%\011TemperatureConverterTest.java	

@@ -1,0 +1,24 @@
+Name: Kevin Bumgarner
+AUID: kgb0022 / 903935034
+Hours Spent: 13.3
+Consulted With: NONE
+IDE: JGrasp v2.0.6_08
+
+Resources Used: Any books, papers, or online resources are listed below under corresponding methods. 	
+		- Looping through a String: https://www.codegrepper.com/profile/cautious-cockroach-azjtgrb5jhl9
+		- Hash Maps: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html
+		- Priority Queues: https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html
+		- Array Lists: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+		- Project PDF, Project Deliverables PDF
+		- Sorting Array Lists: https://docs.oracle.com/javase/7/docs/api/java/util/Collections.html
+
+Impressions: It was kind of cool. I've never completed a project using Java GUI so it was good to see one 
+	being used as a good reference for anything I work on in the future.
+
+NO-PLAGIARISM CERTIFICATION: I certify that I wrote the code I am submitting. I
+did not copy whole or parts of it from another student or have another person
+write the code for me. Any code I am reusing in my program from the web or
+some other source is clearly marked as such with its source clearly identified in
+comments.
+
+Signed: Kevin Grant Bumgarner

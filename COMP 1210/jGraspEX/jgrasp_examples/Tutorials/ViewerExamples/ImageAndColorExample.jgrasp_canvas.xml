@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas xmlns="http://www.jgrasp.org">
+  <Language>Java</Language>
+  <Grid>
+    <Snap>true</Snap>
+    <Show>false</Show>
+  </Grid>
+  <Scope id="0">
+    <Name>main</Name>
+    <Signature>([Ljava/lang/String;)V</Signature>
+    <DeclaringType>ImageAndColorExample</DeclaringType>
+    <Depth>0</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>110</X>
+      <Y>520</Y>
+      <W>58</W>
+      <H>58</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local java.awt.Color` color</Expression>
+      <ViewerClass>java__awt__Color_ColorView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>100</X>
+      <Y>300</Y>
+      <W>198</W>
+      <H>175</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local javax.swing.ImageIcon` imageIcon</Expression>
+      <ViewerClass>javax__swing__ImageIcon_ImageView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>100</X>
+      <Y>70</Y>
+      <W>270</W>
+      <H>180</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local java.awt.Image` image</Expression>
+      <ViewerClass>java__awt__Image_ImageView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Size>
+    <W>459</W>
+    <H>774</H>
+  </Size>
+</Canvas>

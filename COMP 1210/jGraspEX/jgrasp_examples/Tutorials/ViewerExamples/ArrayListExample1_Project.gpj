@@ -1,0 +1,18 @@
+!933;s
+J
+SAU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SCU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+S+U0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SJU0CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\012File\012CLASSPATH+=.%;\012ProjectOrFile\012PATH+=%<JAVA_BIN_DIR>%;\012PATH+=%<JGRASP_PATHS>%;\012Debug +Debug_Applet\012CLASSPATH=+%;%<INJECTION_CLASSPATHS>\012Compile\012NOT_FOUND_MESSAGE==Make sure you have the full JDK, not just the JRE, installed.\\nThe JDK is available from http://www.oracle.com/technetwork/java/index.html.\012Run_Applet +Debug_Applet\012ADD_APPLETVIEWER_CLASSPATH==Y\012Document\012CLASSPATH=+%;%<TOOL_CLASSPATHS>\012CLASSPATH+=%<CLASSES_DIR>%;\012
+SOU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SyU0PATH+=%<PYTHON_PATH>%;\012PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SPU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+s#i0
+s#k0
+s#j0
+s#l0
+!969;d
+[\012  grasp [\012   legendy -96.92857142857143\012   legendx 11.142857142857139\012   version 1\012   winflags 3\012   height 574\012   width 569\012   wbp 0\012   initlayout 0\012   yoffs -30.928571428572027\012   xoffs 13.00000000000017\012   scale 1.0\012   args ""\012   otherflags 139\012   shallowjar 1\012   visflags 252641535\012  ]\012  directed 1\012  node [\012   ClassInfo [\012    fields "ArrayListExample1\\011()V\\011c\\0111\\011\\011\\011ArrayListExample1\011main\\011([Ljava/lang/String;)V\\011\\0119\\011\\011\\011ArrayListExample1"\012    condition 1\012    access2 0\012    access 2097152\012    classname "ArrayListExample1"\012    fromclassfiledate 0\012    fromclassfilename "%\011ArrayListExample1.class"\012    fromfilename "%\011ArrayListExample1.java"\012   ]\012   id 0\012   graphics [\012    center [\012     x -0.7142857142857864\012     y 30.785714285714285\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012 ]!28;g
+%\011ArrayListExample1.java
+!28;f
+%\011ArrayListExample1.java

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas xmlns="http://www.jgrasp.org">
+  <Language>Java</Language>
+  <ShowTypes>false</ShowTypes>
+  <Version>2</Version>
+  <Grid>
+    <Snap>true</Snap>
+    <Show>false</Show>
+  </Grid>
+  <Scope id="0">
+    <Name>main</Name>
+    <Signature>([Ljava/lang/String;)V</Signature>
+    <DeclaringType>ReverseWords</DeclaringType>
+    <Depth>0</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>30</X>
+      <Y>300</Y>
+      <W>714</W>
+      <H>199</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local java.util.ArrayList` inputList</Expression>
+      <Indices>index</Indices>
+      <ViewerClass>java__lang__Object_LinkedView</ViewerClass>
+      <ViewerData>
+        <ViewData>
+          <Width>46</Width>
+        </ViewData>
+      </ViewerData>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>30</X>
+      <Y>120</Y>
+      <W>714</W>
+      <H>130</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local java.util.Scanner` lineScan</Expression>
+      <ViewerClass>java__util__Scanner_PresentationView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>30</X>
+      <Y>30</Y>
+      <W>190</W>
+      <H>46</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local java.lang.String` input</Expression>
+      <ViewerClass>java__lang__String_FormattedView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Size>
+    <W>607</W>
+    <H>711</H>
+  </Size>
+  <ESize>
+    <W>607</W>
+    <H>711</H>
+  </ESize>
+</Canvas>

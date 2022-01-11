@@ -1,0 +1,24 @@
+!826;s
+J
+SAU0PATH+=%<JGRASP_PATHS>%;
+SCU0PATH+=%<JGRASP_PATHS>%;\012PATH+=C:\\cygwin\\bin;\012CYGWIN=nodosfilewarning
+S+U0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SJU0CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\012CLASSPATH+=.%;\012PATH+=%<JAVA_BIN_DIR>%;\012PATH+=%<JGRASP_PATHS>%;\012Debug +Debug_Applet\012CLASSPATH=+%;%<INJECTION_CLASSPATHS>\012Compile\012NOT_FOUND_MESSAGE==Make sure you have the full JDK, not just the JRE, installed.\\nThe JDK is available from http://www.oracle.com/technetwork/java/index.html.\012Run_Applet +Debug_Applet\012ADD_APPLETVIEWER_CLASSPATH==Y\012Document\012CLASSPATH=+%;%<TOOL_CLASSPATHS>\012
+SOU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SyU0PATH+=%<PYTHON_PATH>%;\012PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SPU0
+s#i0
+s#k0
+s#j0
+s#l0
+!878;d
+[\012  grasp [\012   legendy -69.4411764705882\012   legendx -2.1176470588234793\012   version 1\012   winflags 2\012   height 372\012   width 442\012   wbp 0\012   initlayout 0\012   yoffs -21.663865546218588\012   xoffs 7.546218487394583\012   scale 1.0\012   args ""\012   otherflags 139\012   shallowjar 1\012   visflags 118423807\012  ]\012  directed 1\012  node [\012   ClassInfo [\012    fields "Hello\\011()V\\011c\\0111\\011\\011\\011Hello\011main\\011([Ljava/lang/String;)V\\011\\0119\\011\\011\\011Hello"\012    condition 0\012    access2 0\012    access 2490401\012    classname "Hello"\012    fromclassfiledate 1330720731047\012    fromclassfilename "%\011Hello.class"\012    fromfilename "%\011Hello.java"\012   ]\012   id 0\012   graphics [\012    center [\012     x 0.0\012     y 0.0\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012 ]!38;a
+a%\011StdoutRedirectExample_doc%s	b	c1!16;g
+%\011Hello.java
+!16;f
+%\011Hello.java
+!20;l
+%\011HelloTest.java
+!201;t
+jgrJUnit0xr	%\011Hello.java	1351121870503:P%\011HelloTest.java	%\011HelloTest.java	1351121870503:P%\011Hello.java	
+jgrCheckstyle0xr	%\011Hello.java	1281851661546:P	%\011HelloTest.java	1281916035793:P	

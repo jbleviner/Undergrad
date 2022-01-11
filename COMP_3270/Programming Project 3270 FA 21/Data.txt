@@ -1,0 +1,320 @@
+CODE: METHODS     
+
+private void add(String word, double weight) {
+         // Throw exceptions if Necessary
+         if (word == null) {
+            throw new NullPointerException("Word in add method is Null!");
+         }
+         if (weight < 0) {
+            throw new IllegalArgumentException("Weight in add method is negative");
+         }
+         
+         // Local Variables
+         Node currNode = myRoot;
+         
+         // Create intermediate Nodes. Root will be Null I believe.
+         for (char c : word.toCharArray()) {
+         
+            if (currNode.mySubtreeMaxWeight < weight) { // Check maxweight and update if needed.
+               currNode.mySubtreeMaxWeight = weight;
+            }
+          
+            if (currNode.getChild(c) == null) { // Node holding c does not exist, crerate it.
+               Node childNode = new Node(c, currNode, weight);
+               currNode.children.put(c, childNode);
+            }  
+            
+            currNode = currNode.getChild(c);        
+         }
+         
+         // Once intermediate nodes are created, isWord, setWord, and setWeight are given values. 
+         currNode.isWord = true;           
+         currNode.setWord(word);
+         currNode.setWeight(weight);
+      }
+   
+        /**
+         * Required by the Autocompletor interface. Returns an array containing the
+         * k words in the trie with the largest weight which match the given prefix,
+         * in descending weight order. If less than k words exist matching the given
+         * prefix (including if no words exist), then the array instead contains all
+         * those words. e.g. If terms is {air:3, bat:2, bell:4, boy:1}, then
+         * topKMatches("b", 2) should return {"bell", "bat"}, but topKMatches("a",
+         * 2) should return {"air"}
+         * 
+         * @param prefix
+         *            - A prefix which all returned words must start with
+         * @param k
+         *            - The (maximum) number of words to be returned
+         * @return An Iterable of the k words with the largest weights among all
+         *         words starting with prefix, in descending weight order. If less
+         *         than k such words exist, return all those words. If no such words
+         *         exist, return an empty Iterable
+         * @throws a
+         *             NullPointerException if prefix is null
+         */
+      public Iterable<String> topMatches(String prefix, int k) {
+         if (prefix == null) {
+            throw new NullPointerException("Prefix in topMatches is Null");
+         }
+         
+         // Local Variables
+         Node currNode = myRoot;
+         ArrayList<Node> sortedNodeList = new ArrayList<Node>();
+         ArrayList<String> tMatchesList = new ArrayList<String>();
+         PriorityQueue<Node> nodeQ = new PriorityQueue<Node>(new Node.ReverseSubtreeMaxWeightComparator());
+         
+         // K is zero so there will be no matches 
+         if (k == 0) {
+            return tMatchesList;
+         }
+         
+         // Navigate to last character in prefix, this will be the 'root' for our subtree to scan
+         for (char c : prefix.toCharArray()) {
+            if (!(currNode.getChild(c) == null)) {
+               currNode = currNode.getChild(c);
+            } else {
+               return tMatchesList;
+            }
+         }
+         
+         nodeQ.add(currNode);
+         
+         // Scan our subtree until we have k top matches
+         while (nodeQ.size() > 0) {
+            if (sortedNodeList.size() == k && (nodeQ.peek().mySubtreeMaxWeight < sortedNodeList.get(k - 1).getWeight())) {
+               break;
+            }
+            currNode = nodeQ.poll();
+         
+            if (currNode.isWord) {
+               sortedNodeList.add(currNode);
+            }
+            
+            nodeQ.addAll(currNode.children.values());
+         }
+         
+         // Order the k top matches
+         Collections.sort(sortedNodeList, Collections.reverseOrder());
+         
+         // Add matches to a String type list
+         if (sortedNodeList.size() >= k) {
+            for (int i = 0; i < k; i++) {
+               tMatchesList.add(sortedNodeList.get(i).getWord());
+            }
+         } else {
+            for (Node n : sortedNodeList) {
+               tMatchesList.add(n.getWord());
+            }
+         }
+      
+         return tMatchesList;
+      }
+   
+        /**
+         * Given a prefix, returns the largest-weight word in the trie starting with
+         * that prefix.
+         * 
+         * @param prefix
+         *            - the prefix the returned word should start with
+         * @return The word from with the largest weight starting with prefix, or an
+         *         empty string if none exists
+         * @throws a
+         *             NullPointerException if the prefix is null
+         */
+      public String topMatch(String prefix) {
+         if (prefix == null) {
+            throw new NullPointerException("Prefix is null in topMatch");
+         }
+         
+         // Local variables
+         String tm = "";
+         Node currNode = myRoot;
+         PriorityQueue<Node> nodeQ = new PriorityQueue<Node>(new Node.ReverseSubtreeMaxWeightComparator());
+         
+         // Navigate to the node coresponding to the end of prefix
+         for (char c : prefix.toCharArray()) {
+            if (!(currNode.getChild(c) == null)) {
+               currNode = currNode.getChild(c);
+            } else {
+               return tm;
+            }
+         }
+         
+         // Determine the max weight to follow down the Trie
+         double maxWeight = currNode.mySubtreeMaxWeight;
+         
+         // Find the top Match that equals max weight and is a word
+         if ((currNode.isWord) && (currNode.getWeight() == maxWeight)) {
+            return currNode.getWord();
+         } else {
+            while (nodeQ.size() > 0) {
+            
+               if (currNode.isWord && currNode.getWeight() == maxWeight) {
+                  tm = currNode.getWord();
+                  break;
+               }
+            
+               currNode = nodeQ.poll();
+               nodeQ.addAll(currNode.children.values());
+            }
+         }
+         
+         return tm;
+      }
+   
+        /**
+         * Return the weight of a given term. If term is not in the dictionary,
+         * return 0.0
+         */
+      public double weightOf(String term) {
+         Node currNode = myRoot;
+            
+         for (char c : term.toCharArray()) {
+            if (!(currNode.getChild(c) == null)) {
+               currNode = currNode.getChild(c);
+            } else {
+               return 0.0;
+            }
+         }
+         return currNode.myWeight;
+      }
+   
+
+DATA: BENCHMARKING
+
+Found 333333 words
+Time to initialize BruteAutoComplete - 0.0562893
+Time to initialize Autocomplete.BinarySearchAutocomplete - 0.421283
+Time to initialize - Autocomplete.TrieAutocomplete - 0.3955245
+Benchmarking Autocomplete$BruteAutocomplete...
+Time for topMatch("") - 6.345701E-4
+Time for topMatch("khombu") - 0.0037885241
+Time for topMatch("k") - 5.94807E-4
+Time for topMatch("kh") - 7.168173E-4
+Time for topMatch("notarealword") - 0.005517518302094818
+Time for topKMatches("", 1) -  0.005920121301775148
+Time for topKMatches("", 4) -  0.00583170337995338
+Time for topKMatches("", 7) -  0.005834017482517483
+Time for topKMatches("khombu", 1) -  0.004858048
+Time for topKMatches("khombu", 4) -  0.0048422291
+Time for topKMatches("khombu", 7) -  0.0048893666
+Time for topKMatches("k", 1) -  0.0044503014
+Time for topKMatches("k", 4) -  0.0044444281
+Time for topKMatches("k", 7) -  0.0044421512
+Time for topKMatches("kh", 1) -  0.0044321651
+Time for topKMatches("kh", 4) -  0.0044441698
+Time for topKMatches("kh", 7) -  0.0044483751
+Time for topKMatches("notarealword", 1) -  0.0045459939
+Time for topKMatches("notarealword", 4) -  0.0045503423
+Time for topKMatches("notarealword", 7) -  0.0045654435
+Benchmarking Autocomplete$BinarySearchAutocomplete...
+Time for topMatch("") - 4.301482E-4
+Time for topMatch("khombu") - 2.6133E-6
+Time for topMatch("k") - 5.901E-6
+Time for topMatch("kh") - 1.6444E-6
+Time for topMatch("notarealword") - 1.9204E-6
+Time for topKMatches("", 1) -  9.045022E-4
+Time for topKMatches("", 4) -  8.734578E-4
+Time for topKMatches("", 7) -  8.723545E-4
+Time for topKMatches("khombu", 1) -  1.1198E-6
+Time for topKMatches("khombu", 4) -  1.1069E-6
+Time for topKMatches("khombu", 7) -  1.1016E-6
+Time for topKMatches("k", 1) -  2.22566E-5
+Time for topKMatches("k", 4) -  2.42933E-5
+Time for topKMatches("k", 7) -  2.59284E-5
+Time for topKMatches("kh", 1) -  1.7611E-6
+Time for topKMatches("kh", 4) -  2.0954E-6
+Time for topKMatches("kh", 7) -  2.5714E-6
+Time for topKMatches("notarealword", 1) -  1.5057E-6
+Time for topKMatches("notarealword", 4) -  1.2248E-6
+Time for topKMatches("notarealword", 7) -  1.2237E-6
+Benchmarking Autocomplete$TrieAutocomplete...
+Created 805917 nodes
+Time for topMatch("") - 1.09986E-5
+Time for topMatch("khombu") - 8.72E-7
+Time for topMatch("k") - 3.495E-7
+Time for topMatch("kh") - 1.318E-7
+Time for topMatch("notarealword") - 2.503E-7
+Time for topKMatches("", 1) -  0.50402705
+Time for topKMatches("", 4) -  0.4857952181818182
+Time for topKMatches("", 7) -  0.4877056454545455
+Time for topKMatches("khombu", 1) -  4.564E-7
+Time for topKMatches("khombu", 4) -  2.717E-7
+Time for topKMatches("khombu", 7) -  2.367E-7
+Time for topKMatches("k", 1) -  0.0048460852
+Time for topKMatches("k", 4) -  1.607E-6
+Time for topKMatches("k", 7) -  0.0048044108
+Time for topKMatches("kh", 1) -  9.75924E-5
+Time for topKMatches("kh", 4) -  2.0733E-6
+Time for topKMatches("kh", 7) -  8.67072E-5
+Time for topKMatches("notarealword", 1) -  1.327E-7
+Time for topKMatches("notarealword", 4) -  1.297E-7
+Time for topKMatches("notarealword", 7) -  1.281E-7
+
+*****************************************************************
+Printing Summary of Results ...
+
+*****************************************************************
+prefix         , Brute          , Binary         , Trie
+          -------------------------------------------------------------------
+               ,    6.34570e-04,     4.30148e-04,     1.09986e-05
+kh_4           ,    4.44417e-03,     2.09540e-06,     2.07330e-06
+k_4            ,    4.44443e-03,     2.42933e-05,     1.60700e-06
+k_7            ,    4.44215e-03,     2.59284e-05,     4.80441e-03
+notarealword_7 ,    4.56544e-03,     1.22370e-06,     1.28100e-07
+notarealword_1 ,    4.54599e-03,     1.50570e-06,     1.32700e-07
+kh_7           ,    4.44838e-03,     2.57140e-06,     8.67072e-05
+notarealword_4 ,    4.55034e-03,     1.22480e-06,     1.29700e-07
+notarealword   ,    5.51752e-03,     1.92040e-06,     2.50300e-07
+khombu         ,    3.78852e-03,     2.61330e-06,     8.72000e-07
+k              ,    5.94807e-04,     5.90100e-06,     3.49500e-07
+_1             ,    5.92012e-03,     9.04502e-04,     5.04027e-01
+_4             ,    5.83170e-03,     8.73458e-04,     4.85795e-01
+_7             ,    5.83402e-03,     8.72355e-04,     4.87706e-01
+khombu_7       ,    4.88937e-03,     1.10160e-06,     2.36700e-07
+k_1            ,    4.45030e-03,     2.22566e-05,     4.84609e-03
+kh             ,    7.16817e-04,     1.64440e-06,     1.31800e-07
+khombu_4       ,    4.84223e-03,     1.10690e-06,     2.71700e-07
+kh_1           ,    4.43217e-03,     1.76110e-06,     9.75924e-05
+khombu_1       ,    4.85805e-03,     1.11980e-06,     4.56400e-07
+               ,    6.34570e-04,     4.30148e-04,     1.09986e-05
+kh_4           ,    4.44417e-03,     2.09540e-06,     2.07330e-06
+k_4            ,    4.44443e-03,     2.42933e-05,     1.60700e-06
+k_7            ,    4.44215e-03,     2.59284e-05,     4.80441e-03
+notarealword_7 ,    4.56544e-03,     1.22370e-06,     1.28100e-07
+notarealword_1 ,    4.54599e-03,     1.50570e-06,     1.32700e-07
+kh_7           ,    4.44838e-03,     2.57140e-06,     8.67072e-05
+notarealword_4 ,    4.55034e-03,     1.22480e-06,     1.29700e-07
+notarealword   ,    5.51752e-03,     1.92040e-06,     2.50300e-07
+khombu         ,    3.78852e-03,     2.61330e-06,     8.72000e-07
+k              ,    5.94807e-04,     5.90100e-06,     3.49500e-07
+_1             ,    5.92012e-03,     9.04502e-04,     5.04027e-01
+_4             ,    5.83170e-03,     8.73458e-04,     4.85795e-01
+_7             ,    5.83402e-03,     8.72355e-04,     4.87706e-01
+khombu_7       ,    4.88937e-03,     1.10160e-06,     2.36700e-07
+k_1            ,    4.45030e-03,     2.22566e-05,     4.84609e-03
+kh             ,    7.16817e-04,     1.64440e-06,     1.31800e-07
+khombu_4       ,    4.84223e-03,     1.10690e-06,     2.71700e-07
+kh_1           ,    4.43217e-03,     1.76110e-06,     9.75924e-05
+khombu_1       ,    4.85805e-03,     1.11980e-06,     4.56400e-07
+               ,    6.34570e-04,     4.30148e-04,     1.09986e-05
+kh_4           ,    4.44417e-03,     2.09540e-06,     2.07330e-06
+k_4            ,    4.44443e-03,     2.42933e-05,     1.60700e-06
+k_7            ,    4.44215e-03,     2.59284e-05,     4.80441e-03
+notarealword_7 ,    4.56544e-03,     1.22370e-06,     1.28100e-07
+notarealword_1 ,    4.54599e-03,     1.50570e-06,     1.32700e-07
+kh_7           ,    4.44838e-03,     2.57140e-06,     8.67072e-05
+notarealword_4 ,    4.55034e-03,     1.22480e-06,     1.29700e-07
+notarealword   ,    5.51752e-03,     1.92040e-06,     2.50300e-07
+khombu         ,    3.78852e-03,     2.61330e-06,     8.72000e-07
+k              ,    5.94807e-04,     5.90100e-06,     3.49500e-07
+_1             ,    5.92012e-03,     9.04502e-04,     5.04027e-01
+_4             ,    5.83170e-03,     8.73458e-04,     4.85795e-01
+_7             ,    5.83402e-03,     8.72355e-04,     4.87706e-01
+khombu_7       ,    4.88937e-03,     1.10160e-06,     2.36700e-07
+k_1            ,    4.45030e-03,     2.22566e-05,     4.84609e-03
+kh             ,    7.16817e-04,     1.64440e-06,     1.31800e-07
+khombu_4       ,    4.84223e-03,     1.10690e-06,     2.71700e-07
+kh_1           ,    4.43217e-03,     1.76110e-06,     9.75924e-05
+khombu_1       ,    4.85805e-03,     1.11980e-06,     4.56400e-07
