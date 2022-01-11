@@ -1,0 +1,31 @@
+	; Write Code Here...
+
+	; Set the values of the EAX, EBX, ECX, and EDX to 0
+	xor eax, eax	; resets EAX to 0
+	xor ebx, ebx	; resets EBX to 0
+	xor ecx, ecx 	; resets ECX to 0
+	xor edx, edx 	; resets EDX to 0
+
+	mov ecx, shift  ; mov the shift variable to ECX
+
+	; 1st Loop: 
+	L1:
+		neg ecx 
+		mov al, input[LENGTHOF input + ecx]
+		mov output[ebx], al
+		neg ecx
+		inc ebx
+	loop L1
+
+	; Some Stuff
+	mov ecx, LENGTHOF input
+	sub ecx, shift
+	xor edx, edx
+
+	; 2nd loop:
+	L2:
+		mov al, input[edx]
+		mov output[ebx], al
+		inc ebx
+		inc edx
+	loop L2

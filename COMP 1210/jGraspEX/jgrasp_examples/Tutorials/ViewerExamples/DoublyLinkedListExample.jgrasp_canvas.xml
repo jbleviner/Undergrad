@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas xmlns="http://www.jgrasp.org">
+  <Language>Java</Language>
+  <ShowTypes>false</ShowTypes>
+  <Version>2</Version>
+  <Grid>
+    <Snap>true</Snap>
+    <Show>false</Show>
+  </Grid>
+  <Scope id="0">
+    <Name>main</Name>
+    <Signature>([Ljava/lang/String;)V</Signature>
+    <DeclaringType>DoublyLinkedListExample</DeclaringType>
+    <Depth>0</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>60</X>
+      <Y>70</Y>
+      <W>119</W>
+      <H>161</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local jgraspvex.DoublyLinkedList` list</Expression>
+      <ViewerClass>java__util__Collection_ToStringView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>false</AutoSize>
+      <X>220</X>
+      <Y>70</Y>
+      <W>898</W>
+      <H>618</H>
+    </Bounds>
+    <PanelSize>
+      <Key>java__lang__Object_LinkedView0</Key>
+      <Order>4</Order>
+      <W>904</W>
+      <H>651</H>
+    </PanelSize>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local jgraspvex.DoublyLinkedList` list</Expression>
+      <ViewerClass>java__lang__Object_LinkedView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Size>
+    <W>1165</W>
+    <H>861</H>
+  </Size>
+  <ESize>
+    <W>1165</W>
+    <H>861</H>
+  </ESize>
+</Canvas>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas>
+  <Language>Java</Language>
+  <Size>
+    <W>837</W>
+    <H>762</H>
+  </Size>
+  <Scope id="0">
+    <Signature>([Ljava/lang/String;)V</Signature>
+    <DeclaringType>CollectionsExample</DeclaringType>
+    <Depth>0</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>yes</AutoSize>
+      <X>693</X>
+      <Y>284</Y>
+      <W>76</W>
+      <H>33</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>((java.util.ArrayList)myArrayList).elementData[1]</Expression>
+      <ViewerClass>_X_PresentationToStringView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>yes</AutoSize>
+      <X>140</X>
+      <Y>56</Y>
+      <W>560</W>
+      <H>171</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>myArrayList</Expression>
+      <ViewerClass>java__lang__Object_LinkedView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>no</AutoSize>
+      <X>38</X>
+      <Y>375</Y>
+      <W>784</W>
+      <H>195</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>myLinkedList</Expression>
+      <ViewerClass>java__lang__Object_LinkedView</ViewerClass>
+    </Viewer>
+  </Frame>
+</Canvas>

@@ -1,0 +1,22 @@
+!1295;s
+J
+SAU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SCU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+S+U0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SJK1user: jdk (integrated debugger, HotSpot VM) - generic
+SJU0CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\012File\012CLASSPATH+=.%;\012CLASSPATH+=%<SRC_CLASSPATHS>%;\012ProjectOrFile\012PATH+=%<JAVA_BIN_DIR>%;\012PATH+=%<JGRASP_PATHS>%;\012Debug +Debug_Applet\012CLASSPATH=+%;%<INJECTION_CLASSPATHS>\012Compile\012NOT_FOUND_MESSAGE==Make sure you have the full JDK, not just the JRE, installed.\\nThe JDK is available from http://www.oracle.com/technetwork/java/index.html.\012Run_Applet +Debug_Applet\012ADD_APPLETVIEWER_CLASSPATH==Y\012Document\012CLASSPATH=+%;%<TOOL_CLASSPATHS>\012CLASSPATH+=%<CLASSES_DIR>%;\012
+SXU0
+SOU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SyU0PATH+=%<PYTHON_PATH>%;\012PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning\012GCC_COLORS=
+SPU0
+s#i0
+s#k0
+s#j0
+s#l0
+!1099;d
+[\012  grasp [\012   legendy -182.0\012   legendx 21.0\012   height 532\012   width 700\012   initlayout 0\012   yoffs -67.36666666666667\012   xoffs 32.40983606557376\012   scale 1.0\012   otherflags 11\012   visflags 453050495\012  ]\012  directed 1\012  node [\012   ClassInfo [\012    access 33\012    classname "Test"\012    fromfilename "%\011Test.java"\012   ]\012   id 0\012   graphics [\012    center [\012     x 0.0\012     y -44.5\012     z 0.0\012    ]\012   ]\012  ]\012  node [\012   ClassInfo [\012    access 4096\012    classname "java/applet/Applet"\012   ]\012   id 1\012   graphics [\012    center [\012     x 0.0\012     y 44.5\012     z 0.0\012    ]\012   ]\012  ]\012  edge [\012   ClassInfo [\012    type -1\012   ]\012   source 1\012   target 0\012   graphics [\012    Point [\012     x 0.0\012     y -6.5\012     z 0.0\012    ]\012    Point [\012     x 0.0\012     y -6.5\012     z 0.0\012    ]\012   ]\012   graphics [\012    Point [\012     x 0.0\012     y -6.5\012     z 0.0\012    ]\012    Point [\012     x 0.0\012     y -6.5\012     z 0.0\012    ]\012   ]\012  ]\012 ]!15;g
+%\011Test.java
+!15;f
+%\011Test.java
+!27;m
+RunSelect	APPLICATION:Test

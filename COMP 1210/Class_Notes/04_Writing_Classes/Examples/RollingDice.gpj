@@ -1,0 +1,24 @@
+!1139;s
+J
+SAU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SCU0PATH+=%<JGRASP_PATHS>%;\012
+S+U0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SJU0CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\012File\012CLASSPATH+=.%;\012CLASSPATH+=%<SRC_CLASSPATHS>%;\012ProjectOrFile\012PATH+=%<JAVA_BIN_DIR>%;\012PATH+=%<JGRASP_PATHS>%;\012Debug +Debug_Applet\012CLASSPATH=+%;%<INJECTION_CLASSPATHS>\012Compile\012NOT_FOUND_MESSAGE==Make sure you have the full JDK, not just the JRE, installed.\\nThe JDK is available from http://www.oracle.com/technetwork/java/index.html.\012Run_Applet +Debug_Applet\012ADD_APPLETVIEWER_CLASSPATH==Y\012Document\012CLASSPATH=+%;%<TOOL_CLASSPATHS>\012CLASSPATH+=%<CLASSES_DIR>%;\012
+SXU0
+SOU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SyU0PATH+=%<PYTHON_PATH>%;\012PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning\012GCC_COLORS=
+SPU0
+s#i0
+s#k0
+s#j0
+s#l0
+!2075;d
+[\012  grasp [\012   legendy -108.46559254360166\012   legendx -13.594576311320083\012   version 1\012   winflags 3\012   eheight 671\012   ewidth 799\012   height 671\012   width 799\012   wbp 0\012   initlayout 0\012   yoffs -10.975724768239388\012   xoffs -22.62052900074991\012   scale 1.0749542399999998\012   args ""\012   otherflags 139\012   shallowjar 1\012   visflags 118423807\012  ]\012  directed 1\012  node [\012   ClassInfo [\012    fields "MAX\\011I\\011\\01126\\011\\011\\011Die\011faceValue\\011I\\011\\0112\\011\\011\\011Die\011Die\\011()V\\011c\\0111\\011\\011\\011Die\011getFaceValue\\011()I\\011\\0111\\011\\011\\011Die\011roll\\011()I\\011\\0111\\011\\011\\011Die\011setFaceValue\\011(I)V\\011\\0111\\011\\011\\011Die\011toString\\011()Ljava/lang/String;\\011\\0111\\011\\011\\011Die"\012    condition 0\012    access2 0\012    access 2228257\012    classname "Die"\012    fromclassfiledate 1486403214000\012    fromclassfilename "%\011Die.class"\012    fromfilename "%\011Die.java"\012   ]\012   id 0\012   graphics [\012    center [\012     x 24.46961722292704\012     y -33.597988885107156\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012  node [\012   ClassInfo [\012    fields "RollingDice\\011()V\\011c\\0111\\011\\011\\011RollingDice\011main\\011([Ljava/lang/String;)V\\011\\0119\\011\\011\\011RollingDice"\012    condition 0\012    access2 0\012    access 2490401\012    classname "RollingDice"\012    fromclassfiledate 1486403214000\012    fromclassfilename "%\011RollingDice.class"\012    fromfilename "%\011RollingDice.java"\012   ]\012   id 1\012   graphics [\012    center [\012     x -46.20860869165372\012     y 47.11141601431564\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012  edge [\012   ClassInfo [\012    dependencies "Die\\011()V\\011c\\011\\011\\011\\011Die\011getFaceValue\\011()I\\011\\011\\011\\011\\011Die\011roll\\011()I\\011\\011\\011\\011\\011Die\011setFaceValue\\011(I)V\\011\\011\\011\\011\\011Die"\012    type 3\012   ]\012   source 0\012   target 1\012  ]\012 ]!31;a
+a%\011RollingDice_doc%s	b	c1	d0!36;g
+%\011Die.java
+%\011RollingDice.java
+!36;f
+%\011Die.java
+%\011RollingDice.java
+!86;t
+jgrCheckstyle0xr	%\011Die.java	1444069851309:F	%\011RollingDice.java	1454944984660:F	

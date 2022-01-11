@@ -1,0 +1,21 @@
+!1139;s
+J
+SAU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SCU0PATH+=%<JGRASP_PATHS>%;\012
+S+U0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SJU0CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\012File\012CLASSPATH+=.%;\012CLASSPATH+=%<SRC_CLASSPATHS>%;\012ProjectOrFile\012PATH+=%<JAVA_BIN_DIR>%;\012PATH+=%<JGRASP_PATHS>%;\012Debug +Debug_Applet\012CLASSPATH=+%;%<INJECTION_CLASSPATHS>\012Compile\012NOT_FOUND_MESSAGE==Make sure you have the full JDK, not just the JRE, installed.\\nThe JDK is available from http://www.oracle.com/technetwork/java/index.html.\012Run_Applet +Debug_Applet\012ADD_APPLETVIEWER_CLASSPATH==Y\012Document\012CLASSPATH=+%;%<TOOL_CLASSPATHS>\012CLASSPATH+=%<CLASSES_DIR>%;\012
+SXU0
+SOU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SyU0PATH+=%<PYTHON_PATH>%;\012PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning\012GCC_COLORS=
+SPU0
+s#i0
+s#k0
+s#j0
+s#l0
+!1905;d
+[\012  grasp [\012   legendy -76.9523809523809\012   legendx 17.095238095238074\012   version 1\012   winflags 3\012   eheight 587\012   ewidth 612\012   height 587\012   width 612\012   wbp 0\012   initlayout 0\012   yoffs -25.828571428571422\012   xoffs 21.18571428571343\012   scale 1.0\012   args ""\012   otherflags 139\012   shallowjar 1\012   visflags 118423807\012  ]\012  directed 1\012  node [\012   ClassInfo [\012    fields "ExceptionScope\\011()V\\011c\\0111\\011\\011\\011ExceptionScope\011level1\\011()V\\011\\0111\\011\\011\\011ExceptionScope\011level2\\011()V\\011\\0111\\011\\011\\011ExceptionScope\011level3\\011()V\\011\\0111\\011\\011\\011ExceptionScope"\012    condition 0\012    access2 0\012    access 2228257\012    classname "ExceptionScope"\012    fromclassfiledate 1514233913000\012    fromclassfilename "%\011ExceptionScope.class"\012    fromfilename "%\011ExceptionScope.java"\012   ]\012   id 0\012   graphics [\012    center [\012     x 53.85714285714286\012     y -26.28571428571428\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012  node [\012   ClassInfo [\012    fields "Propagation\\011()V\\011c\\0111\\011\\011\\011Propagation\011main\\011([Ljava/lang/String;)V\\011\\0119\\011\\011\\011Propagation"\012    condition 0\012    access2 0\012    access 2490401\012    classname "Propagation"\012    fromclassfiledate 1514233913000\012    fromclassfilename "%\011Propagation.class"\012    fromfilename "%\011Propagation.java"\012   ]\012   id 1\012   graphics [\012    center [\012     x -53.85714285714286\012     y 26.28571428571428\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012  edge [\012   ClassInfo [\012    dependencies "ExceptionScope\\011()V\\011c\\011\\011\\011\\011ExceptionScope\011level1\\011()V\\011\\011\\011\\011\\011ExceptionScope"\012    type 3\012   ]\012   source 0\012   target 1\012  ]\012 ]!47;g
+%\011ExceptionScope.java
+%\011Propagation.java
+!47;f
+%\011ExceptionScope.java
+%\011Propagation.java

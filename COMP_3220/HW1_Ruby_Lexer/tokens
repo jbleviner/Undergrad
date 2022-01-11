@@ -1,0 +1,30 @@
+id x
+whitespace  
+unknown unknown
+whitespace  
+int 3
+whitespace 
+id y
+whitespace  
+unknown unknown
+whitespace  
+int 5
+whitespace 
+id z
+whitespace  
+unknown unknown
+whitespace  
+( (
+id x
+whitespace  
++ +
+whitespace  
+id y
+) )
+whitespace  
+/ /
+whitespace  
+int 3
+whitespace 
+id print
+whitespace  
